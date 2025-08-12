@@ -1,0 +1,99 @@
+# The URL the site will be built for
+base_url = "https://dawnandrew100.github.io/seq.rs"
+theme = "papermod"
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+minify_html = true
+
+taxonomies = [{ name = "tags", feed = true }]
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+# truncate_content_length = 100
+# Wether to produce the search index as a javascript file or as a JSON file
+# Accepted value "elasticlunr_javascript" or "elasticlunr_json"
+index_format = "elasticlunr_json"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+
+[extra.papermod]
+keywords = [
+    "Rust",
+    "Rust programming language",
+    "Rust crates",
+    "Rust in bioinformatics",
+    "bioinformatics",
+    "bioinformatics tools",
+    "bioinformatics software",
+    "bioinformatics with Rust",
+    "biotechnology",
+    "biology",
+    "computational biology",
+    "crates",
+    "crates.io",
+    "ferris",
+    "life sciences",
+    "monthly newsletter",
+    "newsletter",
+    "programming",
+    "research",
+    "science",
+    "scientific computing",
+]
+
+title = "Bioinformatics"
+default_theme = "dark"
+theme = "dark"
+language_direction = "auto"
+show_theme_toggle = true
+show_archive_month_count = false
+show_scroll_to_top = true
+show_code_copy_buttons = true
+show_reading_time = true
+show_word_count = false
+show_post_nav_links = true
+show_post_meta = true
+default_toc_open = false
+show_post_edit_button = false
+edit_post_url = "https://github.com/dawnandrew100/seq.rs/tree/main"
+date_format = "%Y-%m-%d"
+navigation = [
+    { url = "$BASE_URL/archive", title = "Archive" },
+    { url = "$BASE_URL/tags", title = "Tags" },
+    { url = "$BASE_URL/search", title = "Search" },
+    { url = "https://github.com/dawnandrew100/seqrs-challenges", title = "Challenge Submissions", is_external = true },
+    { url = "$BASE_URL/contribute", title = "Contribute" },
+]
+
+home_content = """
+Welcome!<br>
+<b>Bioinformatics in Rust</b> is a monthly newsletter showcasing
+the Rust programming language in bioinformatics.<br>
+Check back during the first week of each month for new updates!<br>
+If you like the project, give it a 🌟 on GitHub !
+"""
+home_title = "Bioinformatics in Rust"
+social_icons = [
+    { url = "https://github.com/dawnandrew100/seq.rs", title = "GitHub", icon = "github" },
+    { url = "$BASE_URL/atom.xml", title = "RSS feed", icon = "rss" },
+]
